@@ -6,27 +6,24 @@
  */
 int main(void)
 {
-	int i;
-	int n;
-	int j;
-
-	for (i = 48; i < 58; i++)
+	int ones = '0';
+	int tens = '0';
+	int hundreds = '0';
+	
+	for (hundreds = '0'; hundreds <= '9'; hundreds++)
 	{
-		for (n = 48; j < 58; n++)
+
+	for (tens = '0'; tens  <= 9; tens++)
+	{
+		for (ones = '0'; ones <= 9; ones++)
 		{
-			if (n > i)
-			{
-				for (j = 48; j < 58; j++)
-				{
-					if (j > n)
+					if (!(( ones == tens ) || (tens == hundreds) || (tens > ones) || (hundreds > tens)))
 					{
-						putchar(i);
-						putchar(n);
-						putchar(j);
-						if (i == 55 && n == 56 && j == 57)
+						putchar(hundreds);
+						putchar(tens);
+						putchar(ones);
+						if (!(ones == '9' && hundreds == '7' && tens == '8' ))
 						{
-							break;
-						}
 						
 						putchar(',');
 						putchar(' ');
@@ -35,7 +32,6 @@ int main(void)
 			}
 		}
 	}
-
 	putchar('\n');
 	return (0);
 }
