@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Entry point
+ * main - Print all possible combinition
  *
  * Return: Always 0 (success)
  */
@@ -18,6 +18,6 @@ int main(void)
 	putchar(' ');
 	}
 	}
-	putchar('\n')
-return (0);
+	putchar('\n');
+    return (0);
 }
